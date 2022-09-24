@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+// import Movies from './movies';
 
 export const SingleMovie = () => {
 const {id} = useParams;

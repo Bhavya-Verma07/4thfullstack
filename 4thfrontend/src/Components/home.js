@@ -1,8 +1,23 @@
-import React from 'react'
+// import React from 'react';
+// import { AppContext } from "./context";
+// import { useGlobalContext} from "./context";
+import Movies from './movies';
+import  Search from './search';
 
-export const Home = () => {
+
+const Home = () => {
+  // const name = useContext(AppContext);
+
+  // const name = useGlobalContext();
   return (
-    <div>this is home</div>
-  )
+    <>
+    <div>This is home</div>
+   <Search/>
+   <Movies/>
+      </>
+  );
 };
 export default Home;
+//http://img.omdbapi.com/?apikey=bc0680d7&s=titanic   for data
+
+//http://www.omdbapi.com/?apikey=bc0680d7&s=titanic   for poster
