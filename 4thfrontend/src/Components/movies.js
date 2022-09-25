@@ -1,10 +1,20 @@
 import React from "react";
+// import "./App.css";
 import { NavLink } from "react-router-dom";
 // import Home from "./home";
 import { useGlobalContext } from "./context";
 
 const Movies = () => {
-  const { movie } = useGlobalContext();
+  const { movie, isLoading } = useGlobalContext();
+  if (isLoading) {
+    return (
+      <>
+        <div className=" ">
+          <div className="loading">Loading...</div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <section className="movie-page">
@@ -16,7 +26,9 @@ const Movies = () => {
               <NavLink to={`movie/${imdbID}`} key={imdbID}>
                 <div className="card mx-auto">
                   <div className="card-info">
-                    <h2>{movieName.length>15? `${movieName}...`: movieName}</h2>
+                    <h2>
+                      {movieName.length > 15 ? `${movieName}...` : movieName}
+                    </h2>
                     <img src={Poster} alt={imdbID} srcSet="" />
                   </div>
                 </div>
