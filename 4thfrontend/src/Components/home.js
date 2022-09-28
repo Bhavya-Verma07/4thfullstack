@@ -11,9 +11,11 @@ const Home = () => {
   // const name = useGlobalContext();
   return (
     <>
-    <div>This is home</div>
+    
+    <div className='container'>
    <Search/>
    <Movies/>
+   </div>
       </>
   );
 };

@@ -1,14 +1,16 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+// import useFetch from "./useFetch";
+// import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import Movies from './movies';
 
-export const SingleMovie = () => {
-const {id} = useParams;
-
+const SingleMovie = () => {
+const {id} = useParams();
+console.log(id);
   return (
-    <>
-    <div>Our single Movie {id} </div>
-  </>
-  )
+   <>
+<div>Our single Movie {id}</div>
+   </>
+);
 };
 export default SingleMovie;
